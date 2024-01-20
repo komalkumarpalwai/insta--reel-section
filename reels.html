@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram/Reels</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            height: 100vh;
+            width: 100vw;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container
+        {
+            height: 70vh;
+            width: 35vw;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            border: none;
+            border-radius: 1%;
+            background-color:gainsboro;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.822) ;
+        }
+        .container::-webkit-scrollbar {
+  width: 0;  
+  height: 0; 
+}
+        .container i
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 2vw;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+           
+        }
+   .options
+    {
+        height: 40vh;
+        width: 5vw;  
+     
+      position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1%;
+        flex-direction: column;
+       
+    }
+#off
+{
+    display: none;
+}
+    .options i
+    {
+        font-size: 2vw;
+        margin: 1%;
+        gap: 10%;
+       margin: 10%;
+       
+    }
+    .options i p
+    {
+        font-size: 1vw;
+    }
+    img
+    {
+        margin-top: 80%;
+        height: 30px;
+    }
+   .container     #volumeIcon.on {
+  display: inline-block;
+  
+  position: fixed;
+}
+
+    #volumeIcon.off {
+  display: none;
+  
+  position: fixed;
+
+    }
+    .container video
+    {
+        height: 100%;
+        width: 90%;
+        position: absolute;
+    } 
+    .container .belowcontent
+   {
+  
+    position: relative;
+    margin-top: 70%;
+    height: 20vh;
+   
+   }
+
+h5{
+  font-size: 1.5vw;
+    color: white;
+   }
+   .belowcontent .detalis
+   {
+   
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 2%;
+   }
+   .detalis .userlogo
+   {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: gray;
+   }
+   .follotbtn
+   {
+    height: 5vh;
+    width: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.655);
+   }
+   a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+   }
+   .saved
+   {
+    background-color: gainsboro;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   margin-right: 5%;
+   margin-bottom: 5%;
+   display: none;
+   transition: 0.3s ease-in-out;
+   
+    border-bottom: 5px solid black;
+    box-shadow: 4px 4px 20px blueviolet;
+   }
+   </style>
+     
+    <div class="container">
+        <i class="ri-volume-down-line on" id="on"></i>
+        <i class="ri-volume-mute-line off" id="off"></i> 
+        <video src="soul.mp4" autoplay infinite loop  id="video" muted></video>
+        <div class="belowcontent">
+        <div class="detalis">
+        <div class="userlogo"></div>
+        <div class="username"><h5>soulmaxii</h5></div>
+        <div class="follotbtn"><h5>Follow</h5></div>
+        </div>
+        </div>
+        </div>
+        
+        <div class="options">
+        <i class="ri-heart-line" id="like"><p>80.0k</p></i>
+        <i class="ri-chat-1-line" id="comment"><p>500</p></i>
+        
+        <a href="www.instagram.com"><i class="ri-send-plane-line" id="share"><p>0</p></i></a>
+        <i class="ri-save-line" id="savereel"><p></p></i>
+        </div>
+        
+</div>
+   <div class="saved">
+   <h2>reel was saved</h2> 
+   </div>
+    <script src="reels.js"></script>
+</body>
+</html>
